@@ -1,0 +1,16 @@
+0. npm install -g json-server
+
+1. And run following code inside the json folder
+json-server --watch db.json --port 8000D
+
+2.and do what ever you want in postman
+http://localhost:8000/cities
+
+3.Keys in object will become /routes
+
+4.Values with id(numbers) will become params id and names query id's:
+http://localhost:8000/cities/5 <--------> req.params.id === 5
+http://localhost:8000/cities?name=Barcelona <--------> req.query.name === Barcelona
+
+5.Sort ascending order
+http://localhost:8000/cities?_sort=name&_order=asc
